@@ -1,0 +1,66 @@
+:root {
+  --primary-color: #3498db;
+  --bg-color: #f4f7f6;
+  --surface-color: #ffffff;
+  --text-color: #212529;
+  --border-color: #dee2e6;
+  --muted-text: #6c757d;
+
+  --success-color: #198754;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #2980b9;
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #e9ecef;
+    --border-color: #343a40;
+    --muted-text: #adb5bd;
+
+    --success-color: #157347;
+    --warning-color: #ffca2c;
+    --danger-color: #bb2d3b;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-surface {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.custom-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary-custom:hover {
+  filter: brightness(1.1);
+  color: #fff;
+}
+
+.text-muted-custom {
+  color: var(--muted-text) !important;
+}
